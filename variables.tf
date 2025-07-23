@@ -15,7 +15,7 @@ variable "repo_url" {
   default = "https://github.com/techeazy-consulting/techeazy-devops.git"
 }
 
-variable "key_name" {
+variable "devops-key" {
   description = "Name of existing AWS key pair"
   type        = string
 }
