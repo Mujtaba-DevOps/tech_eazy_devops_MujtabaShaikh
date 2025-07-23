@@ -21,7 +21,6 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-<<<<<<< HEAD
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -31,11 +30,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-=======
-
-      - name: Terraform Plan
-        run: terraform plan -var="key_name=devops-key"
->>>>>>> d8bab63f5135717380dcd902ab63d4ea8701dd2c
 
       - name: Terraform Apply (auto-approve)
         run: terraform apply -auto-approve -var="key_name=devops-key"
